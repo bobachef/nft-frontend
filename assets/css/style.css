@@ -1,0 +1,150 @@
+/* Global css starts here */
+:root{
+    --primary-color: #1F2235;
+    --secondry-color: #15192A;
+}
+body{
+    background-color: var(--primary-color);
+    padding: 0px;
+    height: 0px;
+}
+section{
+    height: auto;
+}
+a{
+    color: white !important;
+}
+a:hover{
+    text-decoration: none;
+}
+ul li{
+    list-style-type: none;
+}
+
+.custom-container{
+    width: 87%;
+    margin: 0 auto;
+}
+.primary-button{
+    border: 1.5px solid #FFC378;
+    font-weight: 600;
+}
+.section-heading{
+    color: #FFFFFF !important;
+    font-size: 55px;
+    font-weight: 450;
+}
+.section-subheading{
+    color: #FFC378 !important;
+    font-size: 18px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+.section-txt{
+    color: #BBBFDD;
+    font-size: 16px;
+}
+.explore-btn{
+    width: 157px;
+}
+.explore-btn-inner{
+    background: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    border: 2px solid #FFC378;
+}
+.explore-btn .input-group-text{
+    background: #ffc378b0;
+    border: 2px solid #FFC378;  
+}
+/* Global css ends here */
+
+/* Navbar starts here */
+.nav-link{
+    color: #FFFFFF;
+}
+.nav-link:hover{
+    color: #FFFFFF;
+}
+/* Navbar ends here */
+
+/* hero section starts here */
+.hero-img{
+    width: 90%;
+}
+.right-arrow{
+    background: #ba9263;
+}
+/* hero section ends here */
+
+/* mekas section starts here */
+.mekas-inner{
+    background-color: #313552;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    height: auto;
+}
+.mekas-img{
+    height: 110%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+/* mekas section ends here */
+
+/* artworks section starts here */
+.artworks-section{
+    padding-top: 3%;
+    padding-bottom: 3%;
+    height: auto;
+}
+.artwork-1{
+    margin-top: 30%;
+}
+.artwork-2{
+    margin-top: 15%;
+}
+/* artworks section ends here */
+
+/* roadmap section starts here */
+.roadmap-list li{
+    color: #9AA6D0;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.roadmap-list .active{
+    color: #FFFFFF !important;
+}
+.roadmap-list .active-rank{
+    color: #FFC378 !important;
+}
+.roadmap-section hr{
+    border-top: 3px solid #D8D8D8 !important;
+    width: 52px;
+    float: left;
+    margin-top: 38px;
+}
+.roadmap-step-header{
+    background-color: #313552;
+    padding: 30px;
+    border-top: 3px solid #FFC378;
+}
+.step-heading{
+    color: #FFFFFF !important;
+    font-size: 32px;
+    font-weight: 450;
+}
+.step-body{
+    background-color: #D2D9F6;
+    padding: 22px 50px;
+}
+.roadmap-step-block{
+    width: 90%;
+}
+.robot-img{
+    position: absolute;
+    right: 14px;
+    top: -93px;
+    width: 24%;
+}
+/* roadmap section ends here */
