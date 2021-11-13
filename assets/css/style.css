@@ -20,6 +20,10 @@ a:hover{
 ul li{
     list-style-type: none;
 }
+h3{
+    color: #FFFFFF;
+    font-weight: 400;
+}
 
 .custom-container{
     width: 87%;
@@ -55,7 +59,11 @@ ul li{
 }
 .explore-btn .input-group-text{
     background: #ffc378b0;
-    border: 2px solid #FFC378;  
+    border-top: 2px solid #FFC378;
+    border-right: 2px solid #FFC378;
+    border-bottom: 2px solid #FFC378;  
+    border-left: none;
+
 }
 /* Global css ends here */
 
@@ -107,8 +115,8 @@ ul li{
 /* artworks section ends here */
 
 /* roadmap section starts here */
-.roadmap-list li{
-    color: #9AA6D0;
+.roadmap-list a{
+    color: #9AA6D0 !important;
     font-size: 14px;
     text-transform: uppercase;
 }
@@ -136,7 +144,7 @@ ul li{
 }
 .step-body{
     background-color: #D2D9F6;
-    padding: 22px 50px;
+    padding: 40px 50px;
 }
 .roadmap-step-block{
     width: 90%;
@@ -147,4 +155,91 @@ ul li{
     top: -93px;
     width: 24%;
 }
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background: none !important;
+    color: white !important;
+}
+
 /* roadmap section ends here */
+
+/* team section starts here */
+.team-section{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    height: auto;
+}
+/* team section ends here */
+
+/* selling steps section starts here */
+.selling-steps-section{
+    padding-bottom: 5%;
+    height: auto;
+}
+.selling-steps-block{
+    background-color: #24273D;
+    width: 77%;
+    margin: 0 auto;
+    padding: 0px 30px;
+}
+.step-card{
+    padding: 57px 5px;
+}
+.step-card-2{
+    padding: 57px 20px;
+}
+/* selling steps section ends here */
+
+/* join community section starts here */
+.join-community-block{
+    background-image: url(../img/community-bg.svg);
+    background-size: cover;
+    background-position: center;
+    width: 77%;
+    margin: 0 auto;
+    padding: 9% 5% 8% 6%;
+    position: relative;
+}
+.join-community-block p{
+    color: #FFD2D6;
+    font-size: 16px;
+}
+.join-community-block .explore-btn-inner{
+    border: 2px solid #ffffff;
+}
+.join-community-block .explore-btn .input-group-text{
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    border-left: none;
+    background: #EC757F;
+}
+.join-community-block .right-arrow{
+    background: #EC757F;
+}
+/* join community section ends here */
+
+/* footer section starts here */
+.footer-section{
+    background-color: #252840;
+    padding-top: 16%;
+    padding-bottom: 1%;
+    height: auto;
+    margin-top: -115px;
+}
+.footer-section ul li{
+    display: inline;
+}
+.footer-border{
+    border-top: 1px solid rgb(255 255 255 / 10%) !important;
+}
+.footer-txt{
+    color: #A1A3C3;
+}
+.social-icon{
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(
+        288deg) brightness(102%) contrast(102%);
+}
+.social-icon:hover {
+    transform: scale(1.5);
+  }
+/* footer section ends here */

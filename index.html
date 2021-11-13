@@ -4,7 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NFT</title>
+    <!-- OG starts here -->
+    <meta property="og:site_name" content="NFT" />
+    <meta property="og:title" content="NFT - Put your investments on auto-pilot!"/>
+    <meta property="og:description" content="NFT - Engineered to be the most deflationary token in the world."/>
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://feature-design.d3atcx2t57d2p.amplifyapp.com/nft-logo.png"/>
+    <meta property="og:url" content="https://feature-design.d3atcx2t57d2p.amplifyapp.com/" />
+    <title>NFT - Put your investments on auto-pilot!</title>
+    <link rel="icon" href="./assets/img/nft-logo.png" type="image/gif" sizes="16x16">
+
     <!------- ALL LINKED CSS------->
     <!-- Bootstrap 4 css CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -139,23 +148,75 @@
         </div>
         <div class="row">
           <div class="col-md-4">
-            <ul class="roadmap-list mt-4">
-              <li class="active"><span class="active-rank pr-3">01</span> LAUNCH ROADMAP</li>
-              <li class="pt-5"><span class="pr-3">02</span> PHYSICAL PART</li>
-              <li class="pt-5"><span class="pr-3">03</span> MekaVerse x Artists</li>
-              <li class="pt-5"><span class="pr-3">04</span> Meka Multiverse</li>
-              <li class="pt-5"><span class="pr-3">05</span> Future of Mekas</li>
-            </ul>
+            <div class="nav flex-column nav-pills roadmap-list" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link active" id="launch-roadmap-tab" data-toggle="pill" href="#launch-roadmap" role="tab" aria-controls="v-pills-home" aria-selected="true"><span class="pr-2">01</span> LAUNCH ROADMAP</a>
+                <a class="nav-link mt-4" id="physical-part-tab" data-toggle="pill" href="#physical-part" role="tab" aria-controls="v-pills-profile" aria-selected="false"><span class="pr-2">02</span> PHYSICAL PART</a>
+                <a class="nav-link mt-4" id="mekaverse-artists-tab" data-toggle="pill" href="#mekaverse-artists" role="tab" aria-controls="v-pills-messages" aria-selected="false"><span class="pr-2">03</span> MEKAVERSE X ARTISTS</a>
+                <a class="nav-link mt-4" id="meka-multiverse-tab" data-toggle="pill" href="#meka-multiverse" role="tab" aria-controls="v-pills-settings" aria-selected="false"><span class="pr-2">04</span> MEKA MULTIVERSE</a>
+                <a class="nav-link mt-4" id="future-mekas-tab" data-toggle="pill" href="#future-mekas" role="tab" aria-controls="v-pills-settings" aria-selected="false"><span class="pr-2">05</span> FUTURE OF MEKAS</a>
+            </div>
           </div>
           <div class="col-md-8 position-relative">
-            <img src="./assets/img/robot.svg" alt="robot img" class="robot-img">
-            <div class="roadmap-step-block">
-              <div class="roadmap-step-header">
-                <p class="section-subheading mb-0">Step 01</p>
-                <h1 class="step-heading">Launch Roadmap</h1>
+            <div class="tab-content" id="v-pills-tabContent">
+              <div class="tab-pane fade show active" id="launch-roadmap" role="tabpanel" aria-labelledby="launch-roadmap-tab">
+                <img src="./assets/img/robot.svg" alt="robot img" class="robot-img">
+                <div class="roadmap-step-block">
+                  <div class="roadmap-step-header">
+                    <p class="section-subheading mb-0">Step 01</p>
+                    <h1 class="step-heading">Launch Roadmap</h1>
+                  </div>
+                  <div class="step-body"> 
+                    <p>Quality comes first. The goal is to make our first drop as cool as possible so we can have freedom to develop the universe. We're still working on a number of rarity criteria, as well as a lot of new Lore concepts. The drop release date will be announced as soon as the project's quality and technical aspects are fully progressed. We also need to work hard with our community to make Discord and Twitter even cooler with new additions throughout time.</p>
+                  </div>
+                </div>
               </div>
-              <div class="step-body"> 
-                <p>Quality comes first. The goal is to make our first drop as cool as possible so we can have freedom to develop the universe. We're still working on a number of rarity criteria, as well as a lot of new Lore concepts. The drop release date will be announced as soon as the project's quality and technical aspects are fully progressed. We also need to work hard with our community to make Discord and Twitter even cooler with new additions throughout time.</p>
+              <div class="tab-pane fade" id="physical-part" role="tabpanel" aria-labelledby="physical-part-tab">
+                <img src="./assets/img/robot.svg" alt="robot img" class="robot-img">
+                <div class="roadmap-step-block">
+                  <div class="roadmap-step-header">
+                    <p class="section-subheading mb-0">Step 02</p>
+                    <h1 class="step-heading">Physical Part</h1>
+                  </div>
+                  <div class="step-body"> 
+                    <p>Quality comes first. The goal is to make our first drop as cool as possible so we can have freedom to develop the universe. We're still working on a number of rarity criteria, as well as a lot of new Lore concepts. The drop release date will be announced as soon as the project's quality and technical aspects are fully progressed. We also need to work hard with our community to make Discord and Twitter even cooler with new additions throughout time.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="mekaverse-artists" role="tabpanel" aria-labelledby="mekaverse-artists-tab">
+                <img src="./assets/img/robot.svg" alt="robot img" class="robot-img">
+                <div class="roadmap-step-block">
+                  <div class="roadmap-step-header">
+                    <p class="section-subheading mb-0">Step 03</p>
+                    <h1 class="step-heading">Mekaverse x Artists</h1>
+                  </div>
+                  <div class="step-body"> 
+                    <p>Quality comes first. The goal is to make our first drop as cool as possible so we can have freedom to develop the universe. We're still working on a number of rarity criteria, as well as a lot of new Lore concepts. The drop release date will be announced as soon as the project's quality and technical aspects are fully progressed. We also need to work hard with our community to make Discord and Twitter even cooler with new additions throughout time.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="meka-multiverse" role="tabpanel" aria-labelledby="meka-multiverse-tab">
+                <img src="./assets/img/robot.svg" alt="robot img" class="robot-img">
+                <div class="roadmap-step-block">
+                  <div class="roadmap-step-header">
+                    <p class="section-subheading mb-0">Step 04</p>
+                    <h1 class="step-heading">Meka Multiverse</h1>
+                  </div>
+                  <div class="step-body"> 
+                    <p>Quality comes first. The goal is to make our first drop as cool as possible so we can have freedom to develop the universe. We're still working on a number of rarity criteria, as well as a lot of new Lore concepts. The drop release date will be announced as soon as the project's quality and technical aspects are fully progressed. We also need to work hard with our community to make Discord and Twitter even cooler with new additions throughout time.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="future-mekas" role="tabpanel" aria-labelledby="future-mekas-tab">
+                <img src="./assets/img/robot.svg" alt="robot img" class="robot-img">
+                <div class="roadmap-step-block">
+                  <div class="roadmap-step-header">
+                    <p class="section-subheading mb-0">Step 05</p>
+                    <h1 class="step-heading">Future of Mekas</h1>
+                  </div>
+                  <div class="step-body"> 
+                    <p>Quality comes first. The goal is to make our first drop as cool as possible so we can have freedom to develop the universe. We're still working on a number of rarity criteria, as well as a lot of new Lore concepts. The drop release date will be announced as soon as the project's quality and technical aspects are fully progressed. We also need to work hard with our community to make Discord and Twitter even cooler with new additions throughout time.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -163,6 +224,184 @@
       </div>
     </section>
     <!-- roadmap section ends here -->
+
+    <!-- team section starts here -->
+    <section class="team-section">
+      <div class="custom-container">
+        <div class="row">
+          <div class="offset-md-4"></div>
+          <div class="col-md-5">
+            <p class="section-subheading">Who we are</p>
+            <h1 class="section-heading">Creative teams</h1>
+            <p class="section-txt">Hi! Mattey & Matt. B are two friends currently focusing on 3D & Art direction. We have been working hard to establish our own style, and we're continuously looking for new ways to push ourselves. We also worked with Apple, Microsoft, MTV, Adobe, Adidas, Nike and more!</p>
+          </div>
+          <div class="offset-md-3"></div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-md-4">
+            <h3>Matty</h3>
+            <img src="./assets/img/artwork-4.svg" alt="artwork 4" class="img-fluid mt-2">
+          </div>
+          <div class="col-md-4 text-center">
+            <h3 class="float-left ml-4">NFT Artworks</h3>
+            <img src="./assets/img/artwork-5.svg" alt="artwork 5" class="img-fluid mt-2" width="85%">
+          </div>
+          <div class="col-md-4 text-center">
+            <h3>&nbsp;</h3>
+            <img src="./assets/img/artwork-6.svg" alt="artwork 6" class="img-fluid mt-2" width="85%">
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-md-4">
+            <h3>Matt. B</h3>
+            <img src="./assets/img/artwork-7.svg" alt="artwork 7" class="img-fluid mt-2">
+          </div>
+          <div class="col-md-4 text-center">
+            <h3 class="float-left ml-4">NFT Artworks</h3>
+            <img src="./assets/img/artwork-8.svg" alt="artwork 8" class="img-fluid mt-2" width="85%">
+          </div>
+          <div class="col-md-4 text-center">
+            <h3>&nbsp;</h3>
+            <img src="./assets/img/artwork-9.svg" alt="artwork 9" class="img-fluid mt-2" width="85%">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- team section ends here -->
+
+    <!-- selling steps section starts here -->
+    <section class="selling-steps-section">
+      <div class="custom-container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="section-heading text-center">Get started selling<br> your NFTs</h1>
+          </div>
+        </div>
+        <div class="selling-steps-block mt-5">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="step-card text-center">
+              <img src="./assets/img/step-1.svg" alt="selling step 1">
+              <h3 class="py-3">Set up<br> your wallet</h3>
+              <p class="section-txt">Once you’ve set up your wallet of choice, connect it to NFT marketplace by clicking NOT CONNECTED in the header.
+              </p>
+            </div>
+            </div>
+            <div class="col-md-4">
+              <div class="step-card-2 text-center">
+                <img src="./assets/img/step-2.svg" alt="selling step 2">
+                <h3 class="py-3">Add your FTs</h3>
+                <p class="section-txt pt-4">Click on Connected in the header and select Create Sale. Select your NFT.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="step-card text-center">
+                <img src="./assets/img/step-3.svg" alt="selling step 3">
+                <h3 class="py-3">List them<br> for sale</h3>
+                <p class="section-txt">Once you’ve set up your wallet of choice, connect it to NFT marketplace by clicking NOT CONNECTED in the header.
+
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 d-flex justify-content-center">
+            <div class="input-group mt-5 explore-btn">
+              <a href="" class="form-control explore-btn-inner">Explore</a>
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <img src="./assets/img/right-arrow.png" alt="right arrow" class="right-arrow">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- selling steps section ends here -->
+
+    <!-- join community section starts here -->
+    <section class="join-community-section">
+      <div class="custom-container">
+        <div class="join-community-block">
+          <div class="row">
+            <div class="col-md-8">
+              <h3>Join the community</h3>
+              <p>MekaVerse Discord already has over 150,000 members! If you want to join the #MEKAGANG it’s here. Join us to get the news as soon as possible and follow our latest announcements.</p>
+            </div>
+            <div class="col-md-4">
+              <div class="input-group mt-5 explore-btn">
+                <a href="" class="form-control explore-btn-inner">Explore</a>
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <img src="./assets/img/right-arrow.png" alt="right arrow" class="right-arrow">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- join community section ends here -->
+
+    <!-- footer section starts here -->
+    <section class="footer-section">
+      <div class="custom-container">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="./assets/img/nft-logo.svg" alt="NFT logo">
+          </div>
+          <div class="col-md-6">
+            <ul class="pt-3">
+              <li class="px-3"><a href="#">HOME</a></li>
+              <li class="px-3"><a href="#">TERMS & CONDITIONS</a></li>
+              <li class="px-3"><a href="#">SMART CONTRACT</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr class="footer-border">
+      <div class="custom-container">
+        <div class="row">
+          <div class="col-md-6">
+            <p class="footer-txt">8,888 unique mekas who need drivers.</p>
+          </div>
+          <div class="col-md-6">
+            <ul>
+              <li class="px-3">
+                <a href="">
+                  <img src="./assets/img/facebook.svg" alt="facebook icon" class="social-icon" width="27px">
+                </a>
+              </li>
+              <li class="px-3">
+                <a href="">
+                  <img src="./assets/img/twitter.svg" alt="facebook icon" class="social-icon" width="27px">
+                </a>
+              </li>
+              <li class="px-3">
+                <a href="">
+                  <img src="./assets/img/instagram.svg" alt="facebook icon" class="social-icon" width="27px">
+                </a>
+              </li>
+              <li class="px-3">
+                <a href="">
+                  <img src="./assets/img/discord.svg" alt="facebook icon" class="social-icon" width="27px">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row pt-5">
+          <div class="col-md-12">
+            <p class="text-center footer-txt">©2021 MekaVerse. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer section ends here -->
 
     <!------- ALL LINKED JS SCRIPTS ------->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1029" height="385" viewBox="0 0 1029 385">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Mask" width="1029" height="384" fill="#e43b4a"/>
+    </clipPath>
+  </defs>
+  <g id="Group_1" data-name="Group 1" transform="translate(0 0.5)">
+    <rect id="Mask-2" data-name="Mask" width="1029" height="384" fill="#e43b4a"/>
+    <g id="Mask-3" data-name="Mask" clip-path="url(#clip-path)">
+      <g id="Group_2" data-name="Group 2" transform="translate(982)">
+        <path id="Combined_Shape" data-name="Combined Shape" d="M0,383.983.383,370,81,370.017,80.617,384Zm0-28L.383,342,81,342.016,80.617,356Zm0-29L.383,313,81,313.016,80.617,327Zm0-28L.383,285,81,285.017,80.617,299Zm0-29L.383,256,81,256.017,80.617,270Zm0-28L.383,228,81,228.017,80.617,242Zm0-28L.383,200,81,200.017,80.617,214Zm0-30L.383,170,81,170.016,80.617,184Zm0-28L.383,142,81,142.016,80.617,156Zm0-28L.383,114,81,114.017,80.617,128Zm0-29L.383,85,81,85.017,80.617,99Zm0-28L.383,57,81,57.017,80.617,71Zm0-29L.383,28,81,28.017,80.617,42Zm0-28L.383,0,81,.016,80.617,14Z" fill="#fc4154"/>
+      </g>
+    </g>
+    <path id="Rectangle" d="M198.679,0H350.5L151.821,384H0Z" transform="translate(301)" fill="#db3a48" stroke="#fa5160" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="Rectangle_Copy_18" data-name="Rectangle Copy 18" d="M198.679,0H350.5L151.821,384H0Z" transform="translate(449)" fill="#e63f4d" stroke="#fa5160" stroke-miterlimit="10" stroke-width="1"/>
+  </g>
+</svg>
