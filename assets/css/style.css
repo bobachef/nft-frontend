@@ -23,6 +23,11 @@ ul li{
 h3{
     color: #FFFFFF;
     font-weight: 400;
+    font-family: Avenir;
+}
+@font-face {
+    font-family:"Avenir";
+    src: url("/assets/fonts/Avenir-Black.ttf") format("truetype");
 }
 
 .custom-container{
@@ -37,6 +42,7 @@ h3{
     color: #FFFFFF !important;
     font-size: 55px;
     font-weight: 450;
+    font-family: Avenir;
 }
 .section-subheading{
     color: #FFC378 !important;
