@@ -1,302 +1,303 @@
 /* Global css starts here */
-:root{
-    --primary-color: #1F2235;
-    --secondry-color: #15192A;
+:root {
+  --primary-color: #1f2235;
+  --secondry-color: #15192a;
 }
-body{
-    background-color: var(--primary-color);
-    padding: 0px;
-    height: 0px;
+body {
+  background-color: var(--primary-color);
+  padding: 0px;
+  height: 0px;
 }
-section{
-    height: auto;
+section {
+  height: auto;
 }
-a{
-    color: white !important;
+a {
+  color: white !important;
 }
-a:hover{
-    text-decoration: none;
+a:hover {
+  text-decoration: none;
 }
-ul li{
-    list-style-type: none;
+ul li {
+  list-style-type: none;
 }
-h3{
-    color: #FFFFFF;
-    font-weight: 400;
-    font-family: Avenir;
+h3 {
+  color: #ffffff;
+  font-weight: 400;
+  font-family: Avenir;
 }
 @font-face {
-    font-family:"Avenir";
-    src: url("/assets/fonts/Avenir-Black.ttf") format("truetype");
+  font-family: "Avenir";
+  src: url("/assets/fonts/Avenir-Black.ttf") format("truetype");
 }
 
-.custom-container{
-    width: 87%;
-    margin: 0 auto;
+.custom-container {
+  width: 87%;
+  margin: 0 auto;
 }
-.fixed-top{
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
 }
-.primary-button{
-    border: 1.5px solid #FFC378;
-    font-weight: 600;
+.primary-button {
+  border: 1.5px solid #ffc378;
+  font-weight: 600;
 }
-.section-heading{
-    color: #FFFFFF !important;
-    font-size: 55px;
-    font-weight: 450;
-    font-family: Avenir;
+.section-heading {
+  color: #ffffff !important;
+  font-size: 55px;
+  font-weight: 450;
+  font-family: Avenir;
 }
-.section-subheading{
-    color: #FFC378 !important;
-    font-size: 18px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
+.section-subheading {
+  color: #ffc378 !important;
+  font-size: 18px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
 }
-.section-txt{
-    color: #BBBFDD;
-    font-size: 16px;
+.section-txt {
+  color: #bbbfdd;
+  font-size: 16px;
 }
-.explore-btn{
-    width: 157px;
+.explore-btn {
+  width: 157px;
 }
-.explore-btn-inner{
-    background: transparent;
-    text-align: center;
-    text-transform: uppercase;
-    border: 2px solid #FFC378;
+.explore-btn-inner {
+  background: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  border: 2px solid #ffc378;
 }
-.explore-btn .input-group-text{
-    background: #ffc378b0;
-    border-top: 2px solid #FFC378;
-    border-right: 2px solid #FFC378;
-    border-bottom: 2px solid #FFC378;  
-    border-left: none;
+.explore-btn .input-group-text {
+  background: #ffc378b0;
+  border-top: 2px solid #ffc378;
+  border-right: 2px solid #ffc378;
+  border-bottom: 2px solid #ffc378;
+  border-left: none;
 }
 /* Global css ends here */
 
 /* Navbar starts here */
-.nav-link{
-    color: #FFFFFF;
+.nav-link {
+  color: #ffffff;
 }
-nav .nav-link:hover{
-    color: #FFC378 !important;
+nav .nav-link:hover {
+  color: #ffc378 !important;
 }
 
 /* Navbar ends here */
 
 /* hero section starts here */
-.hero-section{
-    background-color: var(--secondry-color);
-    padding-top: 5%;
-    padding-bottom: 5%;
-    height: auto;
+.hero-section {
+  background-color: var(--secondry-color);
+  padding-top: 5%;
+  padding-bottom: 5%;
+  height: auto;
 }
-.hero-img{
-    width: 90%;
+.hero-img {
+  width: 90%;
 }
-.right-arrow{
-    background: #ba9263;
+.right-arrow {
+  background: #ba9263;
 }
 /* hero section ends here */
 
 /* mekas section starts here */
-.mekas-inner{
-    background-color: #313552;
-    padding-top: 4%;
-    padding-bottom: 4%;
-    height: auto;
+.mekas-inner {
+  background-color: #313552;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  height: auto;
 }
-.mekas-img{
-    height: 110%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
+.mekas-img {
+  height: 110%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 /* mekas section ends here */
 
 /* artworks section starts here */
-.artworks-section{
-    padding-top: 3%;
-    padding-bottom: 3%;
-    height: auto;
+.artworks-section {
+  padding-top: 3%;
+  padding-bottom: 3%;
+  height: auto;
 }
-.artwork-1{
-    margin-top: 30%;
+.artwork-1 {
+  margin-top: 30%;
 }
-.artwork-2{
-    margin-top: 15%;
+.artwork-2 {
+  margin-top: 15%;
 }
 /* artworks section ends here */
 
 /* roadmap section starts here */
-.roadmap-list a{
-    color: #9AA6D0 !important;
-    font-size: 14px;
-    text-transform: uppercase;
+.roadmap-list a {
+  color: #9aa6d0 !important;
+  font-size: 14px;
+  text-transform: uppercase;
 }
-.roadmap-list .active{
-    color: #FFFFFF !important;
+.roadmap-list .active {
+  color: #ffffff !important;
 }
-.roadmap-list .active-rank{
-    color: #FFC378 !important;
+.roadmap-list .active-rank {
+  color: #ffc378 !important;
 }
-.roadmap-section hr{
-    border-top: 3px solid #D8D8D8 !important;
-    width: 52px;
-    float: left;
-    margin-top: 38px;
+.roadmap-section hr {
+  border-top: 3px solid #d8d8d8 !important;
+  width: 52px;
+  float: left;
+  margin-top: 38px;
 }
-.roadmap-step-header{
-    background-color: #313552;
-    padding: 30px;
-    border-top: 3px solid #FFC378;
+.roadmap-step-header {
+  background-color: #313552;
+  padding: 30px;
+  border-top: 3px solid #ffc378;
 }
-.step-heading{
-    color: #FFFFFF !important;
-    font-size: 32px;
-    font-weight: 450;
+.step-heading {
+  color: #ffffff !important;
+  font-size: 32px;
+  font-weight: 450;
 }
-.step-body{
-    background-color: #D2D9F6;
-    padding: 40px 50px;
+.step-body {
+  background-color: #d2d9f6;
+  padding: 40px 50px;
 }
-.roadmap-step-block{
-    width: 90%;
+.roadmap-step-block {
+  width: 90%;
 }
-.rocket-img{
-    position: absolute;
-    right: 19px;
-    top: 103px;
-    width: 15%;
+.rocket-img {
+  position: absolute;
+  right: 19px;
+  top: 103px;
+  width: 15%;
 }
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
-    background: none !important;
-    color: white !important;
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background: none !important;
+  color: white !important;
 }
 
 /* roadmap section ends here */
 
 /* team section starts here */
-.team-section{
-    padding-top: 5%;
-    padding-bottom: 5%;
-    height: auto;
+.team-section {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  height: auto;
 }
 /* team section ends here */
 
 /* selling steps section starts here */
-.selling-steps-section{
-    padding-bottom: 5%;
-    height: auto;
+.selling-steps-section {
+  padding-bottom: 5%;
+  height: auto;
 }
-.selling-steps-block{
-    background-color: #24273D;
-    width: 77%;
-    margin: 0 auto;
-    padding: 0px 30px;
+.selling-steps-block {
+  background-color: #24273d;
+  width: 77%;
+  margin: 0 auto;
+  padding: 0px 30px;
 }
-.step-card{
-    padding: 57px 5px;
+.step-card {
+  padding: 57px 5px;
 }
-.step-card-2{
-    padding: 57px 20px;
+.step-card-2 {
+  padding: 57px 20px;
 }
 /* selling steps section ends here */
 
 /* join community section starts here */
-.join-community-block{
-    background-image: url(../img/community-bg.svg);
-    background-size: cover;
-    background-position: center;
-    width: 77%;
-    margin: 0 auto;
-    padding: 9% 5% 8% 6%;
-    position: relative;
+.join-community-block {
+  background-image: url(../img/community-bg.svg);
+  background-size: cover;
+  background-position: center;
+  width: 77%;
+  margin: 0 auto;
+  padding: 9% 5% 8% 6%;
+  position: relative;
 }
-.join-community-block p{
-    color: #FFD2D6;
-    font-size: 16px;
+.join-community-block p {
+  color: #ffd2d6;
+  font-size: 16px;
 }
-.join-community-block .explore-btn-inner{
-    border: 2px solid #ffffff;
+.join-community-block .explore-btn-inner {
+  border: 2px solid #ffffff;
 }
-.join-community-block .explore-btn .input-group-text{
-    border-top: 2px solid #ffffff;
-    border-right: 2px solid #ffffff;
-    border-bottom: 2px solid #ffffff;
-    border-left: none;
-    background: #EC757F;
+.join-community-block .explore-btn .input-group-text {
+  border-top: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  border-left: none;
+  background: #ec757f;
 }
-.join-community-block .right-arrow{
-    background: #EC757F;
+.join-community-block .right-arrow {
+  background: #ec757f;
 }
 /* join community section ends here */
 
 /* footer section starts here */
-.footer-section{
-    background-color: #252840;
-    padding-top: 16%;
-    padding-bottom: 1%;
-    height: auto;
-    margin-top: -115px;
+.footer-section {
+  background-color: #252840;
+  padding-top: 16%;
+  padding-bottom: 1%;
+  height: auto;
+  margin-top: -115px;
 }
-.footer-section ul li{
-    display: inline;
+.footer-section ul li {
+  display: inline;
 }
-.footer-border{
-    border-top: 1px solid rgb(255 255 255 / 10%) !important;
+.footer-border {
+  border-top: 1px solid rgb(255 255 255 / 10%) !important;
 }
-.footer-txt{
-    color: #A1A3C3;
+.footer-txt {
+  color: #a1a3c3;
 }
-.footer-links li a:hover{
-    color: #FFC378 !important;
+.footer-links li a:hover {
+  color: #ffc378 !important;
 }
-.footer-links li a{
-    padding-right: 20px;
+.footer-links li a {
+  padding-right: 20px;
 }
 .social-icon:hover {
-    transform: scale(1.5);
-  }
+  transform: scale(1.5);
+}
 /* footer section ends here */
 
 /* Media queries */
 
 /* For tablet */
-@media only screen and (max-width: 1150px){
-    .custom-container{
-        width: 90%;
-    }
-    .section-heading{
-        font-size: 40px;
-    }
-    .section-subheading{
-        font-size: 15px;
-    }
-    .mekas-img{
-        height: 95%;
-    }
-    .roadmap-section hr{
-        width: 35px;
-    }
-    .roadmap-step-header{
-        padding: 20px;
-    }
-    .step-body{
-        padding: 20px 31px;
-    }
-    .selling-steps-block{
-        width: 95%;
-    }
-    .footer-links li a{
-        padding-right: 18px;
-        font-size: 14px;
-    }
+@media only screen and (max-width: 1150px) {
+  .custom-container {
+    width: 90%;
+  }
+  .section-heading {
+    font-size: 40px;
+  }
+  .section-subheading {
+    font-size: 15px;
+  }
+  .mekas-img {
+    height: 95%;
+  }
+  .roadmap-section hr {
+    width: 35px;
+  }
+  .roadmap-step-header {
+    padding: 20px;
+  }
+  .step-body {
+    padding: 20px 31px;
+  }
+  .selling-steps-block {
+    width: 95%;
+  }
+  .footer-links li a {
+    padding-right: 18px;
+    font-size: 14px;
+  }
 }
 
 /* for mobile */
