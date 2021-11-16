@@ -34,6 +34,13 @@ h3{
     width: 87%;
     margin: 0 auto;
 }
+.fixed-top{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
 .primary-button{
     border: 1.5px solid #FFC378;
     font-weight: 600;
@@ -69,7 +76,6 @@ h3{
     border-right: 2px solid #FFC378;
     border-bottom: 2px solid #FFC378;  
     border-left: none;
-
 }
 /* Global css ends here */
 
@@ -77,12 +83,19 @@ h3{
 .nav-link{
     color: #FFFFFF;
 }
-.nav-link:hover{
-    color: #FFFFFF;
+nav .nav-link:hover{
+    color: #FFC378 !important;
 }
+
 /* Navbar ends here */
 
 /* hero section starts here */
+.hero-section{
+    background-color: var(--secondry-color);
+    padding-top: 5%;
+    padding-bottom: 5%;
+    height: auto;
+}
 .hero-img{
     width: 90%;
 }
@@ -155,11 +168,11 @@ h3{
 .roadmap-step-block{
     width: 90%;
 }
-.robot-img{
+.rocket-img{
     position: absolute;
-    right: 14px;
-    top: -93px;
-    width: 24%;
+    right: 19px;
+    top: 103px;
+    width: 15%;
 }
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
     background: none !important;
@@ -241,11 +254,51 @@ h3{
 .footer-txt{
     color: #A1A3C3;
 }
-.social-icon{
-    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(
-        288deg) brightness(102%) contrast(102%);
+.footer-links li a:hover{
+    color: #FFC378 !important;
+}
+.footer-links li a{
+    padding-right: 20px;
 }
 .social-icon:hover {
     transform: scale(1.5);
   }
 /* footer section ends here */
+
+/* Media queries */
+
+/* For tablet */
+@media only screen and (max-width: 1150px){
+    .custom-container{
+        width: 90%;
+    }
+    .section-heading{
+        font-size: 40px;
+    }
+    .section-subheading{
+        font-size: 15px;
+    }
+    .mekas-img{
+        height: 95%;
+    }
+    .roadmap-section hr{
+        width: 35px;
+    }
+    .roadmap-step-header{
+        padding: 20px;
+    }
+    .step-body{
+        padding: 20px 31px;
+    }
+    .selling-steps-block{
+        width: 95%;
+    }
+    .footer-links li a{
+        padding-right: 18px;
+        font-size: 14px;
+    }
+}
+
+/* for mobile */
+@media only screen and (max-width: 600px) {
+}
