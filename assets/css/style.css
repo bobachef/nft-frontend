@@ -86,6 +86,12 @@ h3 {
 nav .nav-link:hover {
   color: #ffc378 !important;
 }
+.nav-item .nav-link{
+    margin-right: 20px;
+}
+.nav-row{
+    display: flex;
+}
 
 /* Navbar ends here */
 
@@ -126,10 +132,10 @@ nav .nav-link:hover {
   height: auto;
 }
 .artwork-1 {
-  margin-top: 30%;
+  margin-top: 100px;
 }
 .artwork-2 {
-  margin-top: 15%;
+  margin-top: 50px;
 }
 /* artworks section ends here */
 
@@ -298,8 +304,101 @@ nav .nav-link:hover {
     padding-right: 18px;
     font-size: 14px;
   }
+  .nav-row{
+    display: block;
+  }
+  nav .ml-auto{
+    margin-left: 0px !important;
+    padding-left: 0px;
+}
 }
 
 /* for mobile */
 @media only screen and (max-width: 600px) {
+    .section-heading{
+        font-size: 33px;
+    }
+    .section-subheading{
+        font-size: 13px;
+    }
+    .hero-section{
+      padding-top: 32%;
+      padding-bottom: 12%;
+    }
+    .artwork-1{
+        margin-top: 20px !important;
+    }
+    .artwork-2{
+        margin-top: 20px !important;
+    }
+    .artwork-3{
+        margin-top: 20px !important;
+    }
+    .roadmap-section hr{
+        display: none;
+    }
+    .roadmap-step-block{
+        width: 100%;
+        margin-top: 25px;
+    }
+    .rocket-img{
+        display: none;
+    }
+    .step-body{
+        padding: 15px 13px;
+    }
+    .artwork-5{
+        width: 100%;
+    }
+    .artwork-6{
+        width: 100%;
+    }
+    .artwork-8{
+        width: 100%;
+    }
+    .artwork-9{
+        width: 100%;
+    }
+    .selling-steps-block{
+        margin-top: 20px !important;
+    }
+    .step-card-2{
+        padding: 2px 2px;
+    }
+    .step-card{
+        padding: 20px 5px;
+    }
+    .join-community-block{
+        width: 100%;
+        padding: 10% 5% 15% 6%;
+    }
+    .footer-section{
+        margin-top: -70px;
+        padding-top: 35%;
+    }
+    .footer-links{
+        padding-left: 0px;
+        display: flex;
+        justify-content: center;
+    }
+    .footer-logo{
+        display: flex;
+        justify-content: center;
+    }
+    .footer-links li a{
+        font-size: 10px;
+    }
+    .social-icons-list{
+        padding-left: 0px;
+    }
+    .nav-item .nav-link{
+        margin-right: 0px;
+    }
+    nav .ml-auto{
+        margin-left: 0px !important;
+        padding-left: 0px;
+    }
+    .nav-row{
+        display: block;
+    }
 }
