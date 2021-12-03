@@ -1,6 +1,6 @@
 /* Global css starts here */
 :root {
-  --primary-color: #040D17;
+  --primary-color: #040d17;
   --secondry-color: #15192a;
 }
 body {
@@ -39,7 +39,7 @@ h3 {
 }
 .primary-button {
   border: 1.5px solid #ffc378;
-  background-color: #786B53;
+  background-color: #786b53;
   font-weight: 600;
 }
 .section-heading {
@@ -54,13 +54,13 @@ h3 {
   text-transform: uppercase;
 }
 .section-txt {
-  color: #E9CDB1;
+  color: #e9cdb1;
   font-size: 16px;
 }
 .explore-btn {
   width: 157px;
 }
-.mint-btn{
+.mint-btn {
   border: 1px solid white;
   margin-left: 17px;
   width: 147px;
@@ -89,11 +89,11 @@ h3 {
 nav .nav-link:hover {
   color: #ffc378 !important;
 }
-.nav-item .nav-link{
-    margin-right: 30px;
+.nav-item .nav-link {
+  margin-right: 30px;
 }
-.nav-row{
-    display: flex;
+.nav-row {
+  display: flex;
 }
 
 /* Navbar ends here */
@@ -115,55 +115,55 @@ nav .nav-link:hover {
 /* hero section ends here */
 
 /* feature section starts here */
-.feature-section{
+.feature-section {
   padding-top: 3%;
   padding-bottom: 3%;
   height: auto;
 }
-.feature-section hr{
-  border-top: 2px solid #115B80 !important;
+.feature-section hr {
+  border-top: 2px solid #115b80 !important;
   width: 62px;
   float: left;
   margin-top: 36px;
 }
-.feature-block-icon{
-  background-color: #022B41;
-  border-top: 5px solid #115B80;
+.feature-block-icon {
+  background-color: #022b41;
+  border-top: 5px solid #115b80;
 }
-.feature-block-content{
+.feature-block-content {
   background-color: #042232;
-  border-top: 5px solid #0A344A;
+  border-top: 5px solid #0a344a;
   padding: 20px 25px;
 }
-.block-content-heading{
+.block-content-heading {
   color: white;
   font-size: 19px;
   margin-bottom: 20px;
 }
-.block-content-strip{
-  color: #FFC378;
-  background: #152D37;
+.block-content-strip {
+  color: #ffc378;
+  background: #152d37;
   padding: 5px 20px;
 }
-.block-content-list{
+.block-content-list {
   padding-inline-start: 13px;
 }
-.block-content-list li{
-  color: #FFEEDD;
+.block-content-list li {
+  color: #ffeedd;
   font-size: 14px;
 }
-.block-content-list li::before{
+.block-content-list li::before {
   content: "\2022";
-  color: #FFC378;
+  color: #ffc378;
   font-weight: bold;
-  display: inline-block; 
+  display: inline-block;
   width: 1em;
   margin-left: -1em;
 }
 /* feature section ends here */
 
 /* mecha section starts here */
-.mecha-section{
+.mecha-section {
   padding-top: 3%;
   padding-bottom: 3%;
   height: auto;
@@ -172,7 +172,7 @@ nav .nav-link:hover {
   background-position: right;
   background-size: 181px;
 }
-.mecha-img{
+.mecha-img {
   width: 60%;
 }
 /* mecha section ends here */
@@ -189,19 +189,19 @@ nav .nav-link:hover {
 .artwork-2 {
   margin-top: 50px;
 }
-.artworks-section img{
+.artworks-section img {
   width: 91%;
 }
 /* artworks section ends here */
 
 /* roadmap section starts here */
-.roadmap-section{
+.roadmap-section {
   padding-top: 4%;
   padding-bottom: 4%;
   height: auto;
 }
 .roadmap-list a {
-  color: #FFEEDD !important;
+  color: #ffeedd !important;
   font-size: 14px;
   text-transform: uppercase;
 }
@@ -220,7 +220,7 @@ nav .nav-link:hover {
 .roadmap-step-header {
   background-color: #0a2237;
   padding: 30px;
-  border-top: 2px solid #4D4E55;
+  border-top: 2px solid #4d4e55;
 }
 .step-heading {
   color: #ffffff !important;
@@ -228,8 +228,12 @@ nav .nav-link:hover {
   font-weight: 450;
 }
 .step-body {
-  background: rgb(19,60,75);
-  background: linear-gradient(0deg, rgba(19,60,75,1) 42%, rgba(31,88,106,1) 100%);
+  background: rgb(19, 60, 75);
+  background: linear-gradient(
+    0deg,
+    rgba(19, 60, 75, 1) 42%,
+    rgba(31, 88, 106, 1) 100%
+  );
   padding: 23px 57px 20px 30px;
   color: white;
 }
@@ -271,11 +275,11 @@ nav .nav-link:hover {
 .step-card-2 {
   padding: 57px 20px;
 }
-.step-card p{
-  color: #B7BABD;
+.step-card p {
+  color: #b7babd;
 }
-.step-card-2 p{
-  color: #B7BABD;
+.step-card-2 p {
+  color: #b7babd;
 }
 /* selling steps section ends here */
 
@@ -320,8 +324,8 @@ nav .nav-link:hover {
   z-index: -1000;
   background-size: cover;
 }
-.footer-section::before{
-  content: '';
+.footer-section::before {
+  content: "";
   position: absolute;
   background-color: #040d1787;
   top: 0;
@@ -381,101 +385,101 @@ nav .nav-link:hover {
     padding-right: 18px;
     font-size: 14px;
   }
-  .nav-row{
+  .nav-row {
     display: block;
   }
-  nav .ml-auto{
+  nav .ml-auto {
     margin-left: 0px !important;
     padding-left: 0px;
-}
+  }
 }
 
 /* for mobile */
 @media only screen and (max-width: 600px) {
-    .section-heading{
-        font-size: 33px;
-    }
-    .section-subheading{
-        font-size: 13px;
-    }
-    .hero-section{
-      padding-top: 32%;
-      padding-bottom: 12%;
-    }
-    .artwork-1{
-        margin-top: 20px !important;
-    }
-    .artwork-2{
-        margin-top: 20px !important;
-    }
-    .artwork-3{
-        margin-top: 20px !important;
-    }
-    .roadmap-section hr{
-        display: none;
-    }
-    .roadmap-step-block{
-        width: 100%;
-        margin-top: 25px;
-    }
-    .rocket-img{
-        display: none;
-    }
-    .step-body{
-        padding: 15px 13px;
-    }
-    .artwork-5{
-        width: 100%;
-    }
-    .artwork-6{
-        width: 100%;
-    }
-    .artwork-8{
-        width: 100%;
-    }
-    .artwork-9{
-        width: 100%;
-    }
-    .selling-steps-block{
-        margin-top: 20px !important;
-    }
-    .step-card-2{
-        padding: 2px 2px;
-    }
-    .step-card{
-        padding: 20px 5px;
-    }
-    .join-community-block{
-        width: 100%;
-        padding: 10% 5% 15% 6%;
-    }
-    .footer-section{
-        margin-top: -70px;
-        padding-top: 35%;
-    }
-    .footer-links{
-        padding-left: 0px;
-        display: flex;
-        justify-content: center;
-    }
-    .footer-logo{
-        display: flex;
-        justify-content: center;
-    }
-    .footer-links li a{
-        font-size: 10px;
-    }
-    .social-icons-list{
-        padding-left: 0px;
-    }
-    .nav-item .nav-link{
-        margin-right: 0px;
-    }
-    nav .ml-auto{
-        margin-left: 0px !important;
-        padding-left: 0px;
-    }
-    .nav-row{
-        display: block;
-    }
+  .section-heading {
+    font-size: 33px;
+  }
+  .section-subheading {
+    font-size: 13px;
+  }
+  .hero-section {
+    padding-top: 32%;
+    padding-bottom: 12%;
+  }
+  .artwork-1 {
+    margin-top: 20px !important;
+  }
+  .artwork-2 {
+    margin-top: 20px !important;
+  }
+  .artwork-3 {
+    margin-top: 20px !important;
+  }
+  .roadmap-section hr {
+    display: none;
+  }
+  .roadmap-step-block {
+    width: 100%;
+    margin-top: 25px;
+  }
+  .rocket-img {
+    display: none;
+  }
+  .step-body {
+    padding: 15px 13px;
+  }
+  .artwork-5 {
+    width: 100%;
+  }
+  .artwork-6 {
+    width: 100%;
+  }
+  .artwork-8 {
+    width: 100%;
+  }
+  .artwork-9 {
+    width: 100%;
+  }
+  .selling-steps-block {
+    margin-top: 20px !important;
+  }
+  .step-card-2 {
+    padding: 2px 2px;
+  }
+  .step-card {
+    padding: 20px 5px;
+  }
+  .join-community-block {
+    width: 100%;
+    padding: 10% 5% 15% 6%;
+  }
+  .footer-section {
+    margin-top: -70px;
+    padding-top: 35%;
+  }
+  .footer-links {
+    padding-left: 0px;
+    display: flex;
+    justify-content: center;
+  }
+  .footer-logo {
+    display: flex;
+    justify-content: center;
+  }
+  .footer-links li a {
+    font-size: 10px;
+  }
+  .social-icons-list {
+    padding-left: 0px;
+  }
+  .nav-item .nav-link {
+    margin-right: 0px;
+  }
+  nav .ml-auto {
+    margin-left: 0px !important;
+    padding-left: 0px;
+  }
+  .nav-row {
+    display: block;
+  }
 }
