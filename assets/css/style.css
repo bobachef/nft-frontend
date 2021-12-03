@@ -1,6 +1,6 @@
 /* Global css starts here */
 :root {
-  --primary-color: #1f2235;
+  --primary-color: #040D17;
   --secondry-color: #15192a;
 }
 body {
@@ -25,10 +25,6 @@ h3 {
   font-weight: 400;
   font-family: Avenir;
 }
-@font-face {
-  font-family: "Avenir";
-  src: url("/assets/fonts/Avenir-Black.ttf") format("truetype");
-}
 
 .custom-container {
   width: 87%;
@@ -43,13 +39,13 @@ h3 {
 }
 .primary-button {
   border: 1.5px solid #ffc378;
+  background-color: #786B53;
   font-weight: 600;
 }
 .section-heading {
   color: #ffffff !important;
-  font-size: 55px;
+  font-size: 50px;
   font-weight: 450;
-  font-family: Avenir;
 }
 .section-subheading {
   color: #ffc378 !important;
@@ -58,11 +54,18 @@ h3 {
   text-transform: uppercase;
 }
 .section-txt {
-  color: #bbbfdd;
+  color: #E9CDB1;
   font-size: 16px;
 }
 .explore-btn {
   width: 157px;
+}
+.mint-btn{
+  border: 1px solid white;
+  margin-left: 17px;
+  width: 147px;
+  text-align: center;
+  padding-top: 6px;
 }
 .explore-btn-inner {
   background: transparent;
@@ -87,7 +90,7 @@ nav .nav-link:hover {
   color: #ffc378 !important;
 }
 .nav-item .nav-link{
-    margin-right: 20px;
+    margin-right: 30px;
 }
 .nav-row{
     display: flex;
@@ -97,9 +100,10 @@ nav .nav-link:hover {
 
 /* hero section starts here */
 .hero-section {
-  background-color: var(--secondry-color);
-  padding-top: 5%;
-  padding-bottom: 5%;
+  padding-top: 15%;
+  padding-bottom: 23%;
+  background-image: url(../img/hero-bg.svg);
+  background-position: top;
   height: auto;
 }
 .hero-img {
@@ -110,20 +114,68 @@ nav .nav-link:hover {
 }
 /* hero section ends here */
 
-/* mekas section starts here */
-.mekas-inner {
-  background-color: #313552;
-  padding-top: 4%;
-  padding-bottom: 4%;
+/* feature section starts here */
+.feature-section{
+  padding-top: 3%;
+  padding-bottom: 3%;
   height: auto;
 }
-.mekas-img {
-  height: 110%;
-  display: flex;
-  justify-content: center;
-  text-align: center;
+.feature-section hr{
+  border-top: 2px solid #115B80 !important;
+  width: 62px;
+  float: left;
+  margin-top: 36px;
 }
-/* mekas section ends here */
+.feature-block-icon{
+  background-color: #022B41;
+  border-top: 5px solid #115B80;
+}
+.feature-block-content{
+  background-color: #042232;
+  border-top: 5px solid #0A344A;
+  padding: 20px 25px;
+}
+.block-content-heading{
+  color: white;
+  font-size: 19px;
+  margin-bottom: 20px;
+}
+.block-content-strip{
+  color: #FFC378;
+  background: #152D37;
+  padding: 5px 20px;
+}
+.block-content-list{
+  padding-inline-start: 13px;
+}
+.block-content-list li{
+  color: #FFEEDD;
+  font-size: 14px;
+}
+.block-content-list li::before{
+  content: "\2022";
+  color: #FFC378;
+  font-weight: bold;
+  display: inline-block; 
+  width: 1em;
+  margin-left: -1em;
+}
+/* feature section ends here */
+
+/* mecha section starts here */
+.mecha-section{
+  padding-top: 3%;
+  padding-bottom: 3%;
+  height: auto;
+  background-image: url(../img/dry-tree-right.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 181px;
+}
+.mecha-img{
+  width: 60%;
+}
+/* mecha section ends here */
 
 /* artworks section starts here */
 .artworks-section {
@@ -137,30 +189,38 @@ nav .nav-link:hover {
 .artwork-2 {
   margin-top: 50px;
 }
+.artworks-section img{
+  width: 91%;
+}
 /* artworks section ends here */
 
 /* roadmap section starts here */
+.roadmap-section{
+  padding-top: 4%;
+  padding-bottom: 4%;
+  height: auto;
+}
 .roadmap-list a {
-  color: #9aa6d0 !important;
+  color: #FFEEDD !important;
   font-size: 14px;
   text-transform: uppercase;
 }
 .roadmap-list .active {
-  color: #ffffff !important;
+  color: #ffc378 !important;
 }
 .roadmap-list .active-rank {
   color: #ffc378 !important;
 }
 .roadmap-section hr {
-  border-top: 3px solid #d8d8d8 !important;
+  border-top: 3px solid #434343 !important;
   width: 52px;
   float: left;
   margin-top: 38px;
 }
 .roadmap-step-header {
-  background-color: #313552;
+  background-color: #0a2237;
   padding: 30px;
-  border-top: 3px solid #ffc378;
+  border-top: 2px solid #4D4E55;
 }
 .step-heading {
   color: #ffffff !important;
@@ -168,41 +228,39 @@ nav .nav-link:hover {
   font-weight: 450;
 }
 .step-body {
-  background-color: #d2d9f6;
-  padding: 40px 50px;
+  background: rgb(19,60,75);
+  background: linear-gradient(0deg, rgba(19,60,75,1) 42%, rgba(31,88,106,1) 100%);
+  padding: 23px 57px 20px 30px;
+  color: white;
 }
 .roadmap-step-block {
   width: 90%;
 }
-.rocket-img {
+.boy-img {
   position: absolute;
-  right: 19px;
-  top: 103px;
-  width: 15%;
+  right: -37px;
+  top: 63px;
+  width: 23%;
 }
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   background: none !important;
   color: white !important;
 }
-
 /* roadmap section ends here */
-
-/* team section starts here */
-.team-section {
-  padding-top: 5%;
-  padding-bottom: 5%;
-  height: auto;
-}
-/* team section ends here */
 
 /* selling steps section starts here */
 .selling-steps-section {
   padding-bottom: 5%;
+  padding-top: 5%;
   height: auto;
+  background-image: url(../img/dry-tree-left.svg);
+  background-position: left;
+  background-size: 250px;
+  background-repeat: no-repeat;
 }
 .selling-steps-block {
-  background-color: #24273d;
+  background-color: #042232;
   width: 77%;
   margin: 0 auto;
   padding: 0px 30px;
@@ -212,6 +270,12 @@ nav .nav-link:hover {
 }
 .step-card-2 {
   padding: 57px 20px;
+}
+.step-card p{
+  color: #B7BABD;
+}
+.step-card-2 p{
+  color: #B7BABD;
 }
 /* selling steps section ends here */
 
@@ -226,7 +290,7 @@ nav .nav-link:hover {
   position: relative;
 }
 .join-community-block p {
-  color: #ffd2d6;
+  color: white;
   font-size: 16px;
 }
 .join-community-block .explore-btn-inner {
@@ -237,20 +301,33 @@ nav .nav-link:hover {
   border-right: 2px solid #ffffff;
   border-bottom: 2px solid #ffffff;
   border-left: none;
-  background: #ec757f;
+  background: #ffc378b0;
 }
 .join-community-block .right-arrow {
-  background: #ec757f;
+  background: #ffc378b0;
 }
 /* join community section ends here */
 
 /* footer section starts here */
 .footer-section {
-  background-color: #252840;
+  background-image: url(../img/footer-bg.svg);
   padding-top: 16%;
   padding-bottom: 1%;
   height: auto;
   margin-top: -115px;
+  background-position: center;
+  position: relative;
+  z-index: -1000;
+  background-size: cover;
+}
+.footer-section::before{
+  content: '';
+  position: absolute;
+  background-color: #040d1787;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .footer-section ul li {
   display: inline;
