@@ -9,13 +9,13 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./assets/js/scroll.js":
-/*!*****************************!*\
-  !*** ./assets/js/scroll.js ***!
-  \*****************************/
+/***/ "./js/scroll.js":
+/*!**********************!*\
+  !*** ./js/scroll.js ***!
+  \**********************/
 /***/ (() => {
 
-eval("// Scroll effect on navbar\n$(window).scroll(function () {\n  if ($(window).scrollTop() >= 330) {\n  console.log(\"IF condition is called\");\n    $(\"nav\").addClass(\"fixed-header\");\n    $(\"nav\").css(\"background\", \"#0f0f1482\");\n    $(\"nav\").css(\"transition\", \"max-height 0.5s ease 0s\");\n  } else {\n  console.log(\"else condition is called\");\n    $(\"nav\").removeClass(\"fixed-header\");\n    $(\"nav\").css(\"background\", \"none\");\n  }\n});\n\n\n//# sourceURL=webpack:///./assets/js/scroll.js?");
+eval("// Scroll effect on navbar\n$(window).scroll(function () {\n  if ($(window).scrollTop() >= 180) {\n    $(\"nav\").addClass(\"fixed-header\");\n    $(\"nav\").css(\"background\", \"#0f0f1482\");\n    $(\"nav\").css(\"transition\", \"max-height 0.5s ease 0s\");\n  } else {\n    $(\"nav\").removeClass(\"fixed-header\");\n    $(\"nav\").css(\"background\", \"none\");\n  }\n});\n\n\n//# sourceURL=webpack:///./js/scroll.js?");
 
 /***/ })
 
@@ -26,7 +26,7 @@ eval("// Scroll effect on navbar\n$(window).scroll(function () {\n  if ($(window
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
 /******/ 	var __webpack_exports__ = {};
-/******/ 	__webpack_modules__["./assets/js/scroll.js"]();
+/******/ 	__webpack_modules__["./js/scroll.js"]();
 /******/ 	
 /******/ })()
 ;

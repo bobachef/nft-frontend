@@ -521,4 +521,24 @@ nav .nav-link:hover {
   .nav-row {
     display: block;
   }
+  .feature-section hr{
+    display: none;
+  }
+  .feature-section{
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+  .feature-block-icon{
+    padding: 20px;
+  }
+  .artworks-section img{
+    width: 100%;
+  }
+  .footer-txt{
+    text-align: center;
+  }
+  .social-icons-list{
+    display: flex;
+    justify-content: center;
+  }
 }
