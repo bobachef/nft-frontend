@@ -41,6 +41,12 @@ h3 {
   border: 1.5px solid #ffc378;
   background-color: #786b53;
   font-weight: 600;
+  text-align: center !important;
+}
+.primary-button:hover{
+  background-color: #786b53f0;
+  color: white !important;
+  text-align: center !important;
 }
 .section-heading {
   color: #ffffff !important;
@@ -379,7 +385,8 @@ nav .nav-link:hover {
     padding: 20px 31px;
   }
   .selling-steps-block {
-    width: 95%;
+    width: 100%;
+    padding: 0px 11px;
   }
   .footer-links li a {
     padding-right: 18px;
@@ -391,6 +398,38 @@ nav .nav-link:hover {
   nav .ml-auto {
     margin-left: 0px !important;
     padding-left: 0px;
+  }
+  .feature-section hr{
+    width: 45px;
+  }
+  .roadmap-list a{
+    background-color: black;
+  }
+  .nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+    background: #b0996d !important;
+  }
+  .roadmap-step-block{
+    margin-top: 30px;
+  }
+  .boy-img{
+    display: none;
+  }
+  .roadmap-step-block{
+    width: 100%;
+  }
+  .step-card-2 p{
+    padding-top: 0px !important;
+  }
+  .join-community-block{
+    width: 100%;
+  }
+  .footer-section{
+    padding-top: 5%;
+    margin-top: 0px;
+  }
+  .hero-section{
+    padding-top: 20%;
+    padding-bottom: 20%;
   }
 }
 
