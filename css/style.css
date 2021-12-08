@@ -101,7 +101,26 @@ nav .nav-link:hover {
 .nav-row {
   display: flex;
 }
-
+.connected-btn{
+  background: #042232;
+  color: #FFC378 !important;
+  width: 186px;
+  border: 1px solid #0B456E;
+}
+.bnbBalance{
+  color: white !important;
+}
+.dropdown-menu{
+  background-color: #022c41 !important;
+  padding: 15px !important;
+  width: 204px !important;
+  border-radius: 4px !important;
+}
+.dropdown-toggle::after{
+  position: absolute;
+  right: 12px;
+  top: 50%;
+}
 /* Navbar ends here */
 
 /* hero section starts here */
@@ -358,6 +377,59 @@ nav .nav-link:hover {
   transform: scale(1.5);
 }
 /* footer section ends here */
+
+/* web3.js modal style */
+.bfIkEQ {
+  background-color: #02141e  !important;
+  max-width: 664px !important;
+  border-radius: 10px !important;
+  width: 30% !important;
+  min-width: inherit !important;
+  padding: 15px 0px 0px 0px !important;
+  padding: 15px 0px 15px 0px !important;
+}
+.xPSun {
+  background-color: #011a27  !important;
+  padding: 12px 6px !important;
+  width: 80% !important;
+  border: 1px solid #0a374dbf;
+}
+.hBmmHr {
+  color: rgb(160 160 181) !important;
+  font-size: 17px !important;
+}
+.ceSpQQ {
+  font-size: 15px !important;
+}
+.kaSVED {
+  border: none !important;
+}
+.withdraw-block {
+  position: absolute;
+  top: 5px;
+  right: 4px;
+  color: white;
+  text-align: center;
+}
+.withdraw-btn {
+  background-color: #ffffff;
+  border: 1px solid white;
+  padding: 8px 25px;
+  color: black;
+  font-size: 18px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.withdraw-btn[disabled] {
+  cursor: not-allowed;
+}
+.withdraw-btn:hover {
+  color: black !important;
+}
+.web3modal-provider-wrapper:nth-child(3) {
+  display: none !important;
+}
+/* Network error */
 
 /* Media queries */
 

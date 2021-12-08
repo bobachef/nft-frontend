@@ -37,8 +37,8 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <!-- Navbar starts here -->
 
+    <!-- Navbar starts here -->
     <nav class="navbar navbar-expand-lg fixed-top fixed-header">
       <div class="custom-container nav-row">
         <a class="navbar-brand pt-2" href="#">
@@ -96,12 +96,31 @@
               <a class="nav-link" href="#">Marketplace</a>
             </li>
           </ul>
-          <ul class="ml-auto">
+          <ul class="ml-auto my-auto">
+            <div id="prepare">
             <li class="nav-item">
-              <a class="nav-link primary-button mt-3" href="#"
-                >Connect wallet</a
-              >
+              <a class="nav-link primary-button mt-3" onclick="connectAccount()" type="button"
+                >Connect wallet</a>
             </li>
+            </div>
+            <div id="connected" style="display: none">
+            <li class="nav-item dropdown">
+              <a class="nav-link connected-btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <div class="media">
+                <img src="./img/online-icon.svg" alt="online icon" width="44px">
+                <div class="media-body pl-2">
+                  Connected<br>
+                  <span class="bnbBalance">25.00 BNB</span>
+                </div>
+              </div>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="pt-2"><a href="#">Profile</a></li>
+                <li class="pt-2"><a onclick="disconnect()">Disconnect Wallet</a></li>
+              </ul>
+            </li>
+            </div>
           </ul>
         </div>
       </div>
@@ -777,6 +796,14 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <!-- Web3.js CDN -->
+    <script type="text/javascript" src="https://unpkg.com/web3@1.2.11/dist/web3.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/web3modal@1.9.0/dist/index.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/evm-chains@0.2.0/dist/umd/index.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@walletconnect/web3-provider@1.2.1/dist/umd/index.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/fortmatic@2.0.6/dist/fortmatic.js"></script>
+    <!-- Ethers.js CDN -->
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
     <!-- custom js -->
     <script src="./js/nft.bundle.js"></script>
   </body>

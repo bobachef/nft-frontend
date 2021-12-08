@@ -4,6 +4,7 @@ module.exports = {
   mode: 'development',
   entry: [
     './js/scroll.js',
+    './js/blockchain/connectWallet.js',
   ],
   output: {
     path: path.resolve(__dirname, 'js'),
