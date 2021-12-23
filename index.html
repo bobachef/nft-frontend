@@ -99,17 +99,18 @@
             </li>
           </ul>
           <ul class="ml-auto my-auto">
-            <div id="prepare" style="display: none">
+            <div id="prepare">
               <li class="nav-item">
                 <a
                   class="connect-btn-home mt-2"
                   id="btn-connect"
                   onclick="connectAccount()"
                   type="button"
-                  >Connect wallet</a>
+                  >Connect wallet</a
+                >
               </li>
             </div>
-            <div id="connected">
+            <div id="connected" style="display: none">
               <li class="nav-item dropdown">
                 <a
                   class="nav-link connected-btn dropdown-toggle"
@@ -173,7 +174,12 @@
                   </div>
                 </div>
               </div>
-              <a href="" class="mint-btn is-disabled">MINT YOUR NFT</a>
+              <a
+                data-toggle="modal"
+                data-target="#exampleModalCenter"
+                class="mint-btn"
+                >MINT YOUR NFT</a
+              >
             </div>
             <div class="minting-block">
               <p class="my-2">
@@ -196,6 +202,47 @@
           </div>
         </div>
       </div>
+
+      <!--mint Modal starts here-->
+      <div
+        class="modal fade mt-3 mint-modal"
+        id="exampleModalCenter"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-body">
+              <div class="mint-modal-inner">
+                <p>
+                  How many Fuzion Punks do you<br />
+                  want to mint?
+                </p>
+                <div class="position-relative">
+                  <input
+                    type="number"
+                    placeholder="1"
+                    class="minting-input"
+                  />
+                  <a onclick="maxMintPunks()" class="max-mint-btn">MAX</a>
+                </div>
+                <button class="start-minting-btn">START MINTING</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--mint modal ends here-->
     </section>
     <!-- hero section ends here -->
 
@@ -673,7 +720,10 @@
         <div class="row">
           <div class="col-md-12 d-flex justify-content-center">
             <div class="input-group mt-5 explore-btn" style="width: 185px">
-              <a href="" class="form-control explore-btn-inner is-disabled"
+              <a
+                data-toggle="modal"
+                data-target="#exampleModalCenter"
+                class="form-control explore-btn-inner"
                 >MINT YOUR NFT</a
               >
 
