@@ -8,6 +8,7 @@ const signer = providerHelper.getSigner();
 
 userReferralLink();
 getRef();
+
 $('[data-toggle="tooltip"]').click(function () {
   $(this).tooltip("hide").attr("data-original-title", "Copied").tooltip("show");
 });
@@ -32,7 +33,7 @@ function setCookie(name, value, expiryInDays) {
  * @returns boolean
  */
 function isValidAddress(address) {
-  return ethers.utils.isAddress(address)
+  return ethers.utils.isAddress(address);
 }
 
 /**
@@ -41,7 +42,7 @@ function isValidAddress(address) {
  * @returns string
  */
 function convertFromIcap(address) {
-  return isValidAddress(address) ? ethers.utils.getAddress(address) : null
+  return isValidAddress(address) ? ethers.utils.getAddress(address) : null;
 }
 
 /**
@@ -50,7 +51,7 @@ function convertFromIcap(address) {
  * @returns string
  */
 function convertToIcap(address) {
-  return isValidAddress(address) ? ethers.utils.getIcapAddress(address) : null
+  return isValidAddress(address) ? ethers.utils.getIcapAddress(address) : null;
 }
 
 async function userReferralLink() {
@@ -73,9 +74,21 @@ function copyReferralLink() {
 }
 
 function getReferral() {
-  // let ref;
-  // grab the referral cookie value
-  // return convertToIcap(ref) || ZERO_ADDRESS;
+  let ref = getCookie();
+  return convertFromIcap(ref) || ZERO_ADDRESS;
+}
+
+function getCookie(name = REFERRAL_COOKIE_NAME) {
+  let cookie;
+  let cookieArr = document.cookie.split(";");
+  for (let i = 0; i < cookieArr.length; i++) {
+    let cookiePair = cookieArr[i].split("=");
+    if (name == cookiePair[0].trim()) {
+      // Decode the cookie value and return
+      cookie = decodeURIComponent(cookiePair[1]);
+    }
+  }
+  return cookie;
 }
 
 window.copyReferralLink = copyReferralLink;
@@ -83,4 +96,5 @@ module.exports = {
   userReferralLink,
   copyReferralLink,
   getRef,
+  getReferral,
 };
