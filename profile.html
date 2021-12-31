@@ -165,7 +165,7 @@
               <span class="shortAddress"></span>
             </p>
             <p class="punks-numbers">0 Total Fuzion Punks</p>
-            <div class="presale-status">
+            <div class="presale-status" style="display: none">
               <div class="media p-2">
                 <img
                   src="./img/icons/minting-icon.svg"
@@ -677,7 +677,7 @@
                           <h5 class="mb-0">Total Referrals</h5>
                         </div>
                         <div class="referral-card-body">
-                          <p class="mb-0">0</p>
+                          <p class="mb-0"><span id="totalReferral"></span></p>
                         </div>
                       </div>
                       <div class="col-md-6 mt-4">
@@ -685,7 +685,7 @@
                           <h5 class="mb-0">Total Referral Commissions</h5>
                         </div>
                         <div class="referral-card-body">
-                          <p class="mb-0">0.0000 BNB</p>
+                          <p class="mb-0"><span id="referralCommission"></span></p>
                         </div>
                       </div>
                     </div>
@@ -703,8 +703,7 @@
                               data-toggle="tooltip"
                               data-original-title="Copy to clipboard"
                             >
-                              Copy</a
-                            >
+                              Copy</a>
                             <input
                               type="text"
                               id="referralLink"

@@ -6,7 +6,7 @@ const RPC_URL = {
 };
 
 const PUNK_ADDRESS = {
-  80001: "0x5914B95075535d03F66572103203718279b9B5bB",
+  80001: "0xd873a1463fcc9327B72AF3CF73906f74a35074D4",
 };
 
 const REFERRAL_COOKIE_NAME = "FuzionPunkReferral";
@@ -17,4 +17,5 @@ module.exports = {
   nftContract,
   REFERRAL_COOKIE_NAME,
   REFERRAL_QUERY_PARAM,
+  PUNK_ADDRESS,
 };
