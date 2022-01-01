@@ -1,6 +1,6 @@
 const { providerHelper } = require("./helper");
 const { ethers } = require("ethers");
-const {getProvider} = providerHelper;
+const { getProvider } = providerHelper;
 
 async function getBnbBalance(userAddress) {
   const provider = getProvider();

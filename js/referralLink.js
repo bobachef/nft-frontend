@@ -1,8 +1,10 @@
-const {ZERO_ADDRESS, REFERRAL_QUERY_PARAM, REFERRAL_COOKIE_NAME,} = require("./blockchain/constants");
+const {
+  ZERO_ADDRESS,
+  REFERRAL_QUERY_PARAM,
+  REFERRAL_COOKIE_NAME,
+} = require("./blockchain/constants");
 const { providerHelper } = require("./blockchain/helper/index");
-const {getProvider, getSigner} = require("./blockchain/helper/provider.helper");
-let provider;
-let signer;
+const { getProvider, getSigner } = providerHelper;
 let userAddress;
 
 getRef();
@@ -56,18 +58,18 @@ function convertToIcap(address) {
 async function userReferralLink() {
   let referralLink;
   console.log("userReferralLink() is working");
-  signer = await getSigner();
+  const signer = await getSigner();
   userAddress = await signer.getAddress();
   console.log("userReferralLink address:", userAddress);
   const referralElement = document.getElementById("userReferralLink");
   const copyLinkElement = document.getElementsByClassName("copy-link");
-  if (userAddress){
+  if (userAddress) {
     const icapAddress = convertToIcap(userAddress);
     referralLink = `https://fuzion.team/?ref=${icapAddress}`;
-  }
-  else{
+  } else {
     referralLink = "Connect wallet for referral link";
-    if (copyLinkElement[0]){
+    if (copyLinkElement[0]) {
+      copyLinkElement[0].style.display = "none";
       copyLinkElement[0].style.display = "none";
     }
   }
@@ -80,12 +82,12 @@ async function userReferralLink() {
 }
 
 async function userReferralCommissions() {
-  const referralCommissionElement = document.getElementById("referralCommission");
-  if (userAddress != null && referralCommissionElement){
+  const referralCommissionElement =
+    document.getElementById("referralCommission");
+  if (userAddress != null && referralCommissionElement) {
     referralCommissionElement.innerText = "0.000 BNB";
-  }
-  else{
-    if (referralCommissionElement){
+  } else {
+    if (referralCommissionElement) {
       referralCommissionElement.innerText = "-";
     }
   }
@@ -93,11 +95,10 @@ async function userReferralCommissions() {
 
 async function userTotalReferral() {
   const totalReferralElement = document.getElementById("totalReferral");
-  if (userAddress != null && totalReferralElement){
+  if (userAddress != null && totalReferralElement) {
     totalReferralElement.innerText = `0`;
-  }
-  else{
-    if (totalReferralElement){
+  } else {
+    if (totalReferralElement) {
       totalReferralElement.innerText = "-";
     }
   }

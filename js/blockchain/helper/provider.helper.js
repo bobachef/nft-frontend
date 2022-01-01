@@ -1,38 +1,39 @@
-const { RPC_URL } = require("../constants");
+const { RPC_URL, CHAIN_ID } = require("../constants");
 const { ethers } = require("ethers");
-let web3Provider, rpcProvider;
-let etherProvider;
-let signer;
+let web3Provider, rpcProvider, signer;
 
-function getReadOnlyProvider(rpcUrl = RPC_URL[56]) {
+function getReadOnlyProvider(rpcUrl = RPC_URL[CHAIN_ID]) {
   if (rpcProvider) {
     return rpcProvider;
   }
-  rpcProvider = new ethers.providers.JsonRpcProvider(RPC_URL[56]);
+  rpcProvider = new ethers.providers.JsonRpcProvider(rpcUrl);
   return rpcProvider;
 }
+
 async function getWeb3Provider(connection) {
-  if (!connection){
+  if (!connection) {
     return web3Provider || null;
   }
   web3Provider = new ethers.providers.Web3Provider(connection);
   signer = await web3Provider.getSigner();
   return web3Provider;
 }
+
 async function getSigner() {
   if (signer) {
     return signer;
   }
-  if (!web3Provider){
+  if (!web3Provider) {
     return null;
   }
-  // etherProvider = getProvider();
   signer = await web3Provider.getSigner();
   return signer;
 }
+
 function getProvider() {
   return web3Provider || getReadOnlyProvider();
 }
+
 module.exports = {
   getProvider,
   getSigner,
