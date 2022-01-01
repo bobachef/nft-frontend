@@ -57,10 +57,8 @@ function convertToIcap(address) {
 
 async function userReferralLink() {
   let referralLink;
-  console.log("userReferralLink() is working");
   const signer = await getSigner();
   userAddress = await signer.getAddress();
-  console.log("userReferralLink address:", userAddress);
   const referralElement = document.getElementById("userReferralLink");
   const copyLinkElement = document.getElementsByClassName("copy-link");
   if (userAddress) {

@@ -69,23 +69,18 @@ async function connect() {
   try {
     connection = await web3Modal.connect();
   } catch (error) {
-    console.log("Could not connect to wallet:", error);
+    console.error("Could not connect to wallet:", error);
   }
   return connection;
 }
 
 // triger when connectWallet btn is clicked
 async function connectAccount() {
-  console.log("connectAccount");
   const connection = await connect();
   const provider = await providerHelper.getWeb3Provider(connection);
   const signer = await provider.getSigner();
-  console.log("connectAccount signer:", signer);
-  console.log("connectAccount provider:", provider);
-
   localStorage.setItem("connectStatus", "connected");
   user.address = await signer.getAddress();
-  console.log("connectAccount address:", user.address);
   if (user.address) {
     // function for get bnb Balance
     await getBnbBalance(user.address);
@@ -113,13 +108,12 @@ async function userLoginAttempt() {
   isConnected = false;
   await window.addEventListener("load", async function () {
     status = localStorage.getItem("connectStatus");
-    console.log("status info:", status);
     try {
       if (status !== "connected") {
         await connectAccount();
       }
     } catch (error) {
-      console.error("userLoginAttempt:", error);
+      console.error("userLoginAttempt error:", error);
     }
   });
 }

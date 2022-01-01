@@ -35,14 +35,10 @@ const abi = [
 ];
 
 async function getPunkContract(chainId = CHAIN_ID) {
-  console.log("getPunkContract");
   const provider = await providerHelper.getProvider();
   const signer = await providerHelper.getSigner();
-  console.log("getPunkContract provider:", provider);
-  console.log("getPunkContract signer:", signer);
   const punkAddress = PUNK_ADDRESS[chainId];
   punk = new ethers.Contract(punkAddress, abi, signer || provider);
-  console.log("punk contract:", punk);
   return punk;
 }
 
