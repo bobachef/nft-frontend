@@ -9,6 +9,8 @@ const PUNK_ADDRESS = {
   80001: "0xd873a1463fcc9327B72AF3CF73906f74a35074D4",
 };
 
+const MAX_PUNKS = 10000;
+const MAX_PRESALE_PUNKS = 1000;
 const REFERRAL_COOKIE_NAME = "FuzionPunkReferral";
 const REFERRAL_QUERY_PARAM = "ref";
 module.exports = {
@@ -18,4 +20,6 @@ module.exports = {
   REFERRAL_COOKIE_NAME,
   REFERRAL_QUERY_PARAM,
   PUNK_ADDRESS,
+  MAX_PUNKS,
+  MAX_PRESALE_PUNKS,
 };

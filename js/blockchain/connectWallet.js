@@ -62,9 +62,10 @@ function initWeb3Modal() {
 // trriger when connectWallet btn is clicked
 async function connectAccount() {
   try {
-    connection = await web3Modal.connect();
-    provider = new ethers.providers.Web3Provider(connection);
-    signer = provider.getSigner();
+    // connection = await web3Modal.connect();
+    // provider = new ethers.providers.Web3Provider(connection);
+    // signer = provider.getSigner();
+    provider = await web3Modal.connect();
     const web3 = new Web3(Web3.givenProvider);
     localStorage.setItem("connectStatus", "connected");
     const result = await web3.eth.getAccounts();
@@ -76,6 +77,10 @@ async function connectAccount() {
       // function from punk contract
       await getUserPunkData(user.address);
     }
+    // functions from punk.js file
+    await getPunkConstants();
+    await punkSaleStatus();
+    // functions from referralLink.js file
     await userReferralLink();
     await userReferralCommissions();
     await userTotalReferral();
@@ -91,9 +96,10 @@ async function userLoginAttempt() {
     status = localStorage.getItem("connectStatus");
     try {
       if (status !== "connected") {
-        connection = await web3Modal.connect();
-        provider = new ethers.providers.Web3Provider(connection);
-        signer = provider.getSigner();
+        // connection = await web3Modal.connect();
+        // provider = new ethers.providers.Web3Provider(connection);
+        // signer = provider.getSigner();
+        provider = await web3Modal;
         localStorage.setItem("connectStatus", "connected");
       } else {
         await getShortAddressCheckNetworkErrorCopyLink();
@@ -108,6 +114,10 @@ async function userLoginAttempt() {
         // function from punk contract
         await getUserPunkData(user.address);
       }
+      // functions from punk.js file
+      await getPunkConstants();
+      await punkSaleStatus();
+      // functions from referralLink.js file
       await userReferralLink();
       await userReferralCommissions();
       await userTotalReferral();

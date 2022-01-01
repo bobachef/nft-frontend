@@ -12,7 +12,8 @@ let punk,
     saleIsActive,
     presaleComplete,
     presaleIsActive,
-    isWhiteListed;
+    isWhiteListed,
+    presaleSupply;
 
 const abi = [
   "function totalSupply() public view returns(uint256)",
@@ -30,6 +31,7 @@ const abi = [
   "function mint(uint numberOfTokens, address ref) external payable",
   "function mintPresale(uint numberOfTokens) external payable",
   "function claimRewards() public",
+  "function presaleSupply() public view returns (uint256)",
 ];
 
 async function getPunkContract(chainId = 80001) {
@@ -49,7 +51,10 @@ async function getPunkConstants(){
   promises.push(punk.presaleIsActive());
   promises.push(punk.presaleComplete());
   promises.push(punk.saleIsActive());
-  [punkPrice, punkPriceDiscounted, maxPunkPurchase, maxPresalePurchase, presaleIsActive, presaleComplete, saleIsActive] = await Promise.all(promises);
+  promises.push(punk.totalSupply());
+  promises.push(punk.presaleSupply());
+
+  [punkPrice, punkPriceDiscounted, maxPunkPurchase, maxPresalePurchase, presaleIsActive, presaleComplete, saleIsActive, totalSupply, presaleSupply] = await Promise.all(promises);
   console.log("data from promises:", `${punkPrice} ${punkPriceDiscounted} ${maxPunkPurchase} ${maxPresalePurchase} ${presaleIsActive} ${presaleComplete} ${saleIsActive}`);
 }
 
@@ -57,14 +62,18 @@ async function punkSaleStatus(){
   // Punk sale Status
   const mintStatusElement = document.getElementsByClassName("minting-status");
   const mintBtnElement = document.getElementsByClassName("start-minting-btn");
+  const punksSupplyElement = document.getElementsByClassName("punksSupply");
   console.log("element status:", mintStatusElement[0]);
   if (presaleIsActive){
     if (mintStatusElement[0] || mintStatusElement[1]){
       mintStatusElement[0].innerText = "Presale Minting Live";
       mintStatusElement[1].innerText = "Presale Minting Live";
     }
-    if (mintBtnElement[0]){
+    if (mintBtnElement[0] || punksSupplyElement[0] || punksSupplyElement[1] || punksSupplyElement[2]){
       mintBtnElement[0].innerText = "Mint Presale";
+      punksSupplyElement[0].innerText = presaleSupply.toString();
+      punksSupplyElement[1].innerText = presaleSupply.toString();
+      punksSupplyElement[2].innerText = presaleSupply.toString();
     }
   }
   else if (presaleComplete){
@@ -78,8 +87,11 @@ async function punkSaleStatus(){
       mintStatusElement[0].innerText = "Minting Live";
       mintStatusElement[1].innerText = "Minting Live";
     }
-    if (mintBtnElement[0]){
+    if (mintBtnElement[0] || punksSupplyElement[0] || punksSupplyElement[1] || punksSupplyElement[2]){
       mintBtnElement[0].innerText = "Start Minting";
+      punksSupplyElement[0].innerText = totalSupply.toString();
+      punksSupplyElement[1].innerText = totalSupply.toString();
+      punksSupplyElement[2].innerText = totalSupply.toString();
     }
   }
 }
@@ -95,14 +107,7 @@ async function getUserPunkData(userAddress){
 }
 
 async function getMaxPresaleOrPunkPurchase(){
-  if (presaleIsActive){
-    maxPresalePurchase = await punk.maxPresalePurchase();
-    return maxPresalePurchase;
-  }
-  else{
-    maxPunkPurchase = await punk.maxPunkPurchase();
-    return maxPunkPurchase;
-  }
+  return presaleIsActive ? maxPresalePurchase : maxPunkPurchase;
 }
 
 // async function test(userAddress) {
@@ -152,4 +157,6 @@ module.exports = {
   isWhiteListed,
   getMaxPresaleOrPunkPurchase,
   punkSaleStatus,
+  totalSupply,
+  presaleSupply,
 }
