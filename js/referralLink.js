@@ -4,7 +4,7 @@ const {getProvider, getSigner} = require("./blockchain/helper/provider.helper");
 let ethProvider;
 let userAddress;
 
-getRef();
+// getRef();
 
 $('[data-toggle="tooltip"]').click(function () {
   $(this).tooltip("hide").attr("data-original-title", "Copied").tooltip("show");
@@ -39,6 +39,7 @@ function isValidAddress(address) {
  * @returns string
  */
 function convertFromIcap(address) {
+  console.log("convertFromIcap:", address);
   return isValidAddress(address) ? ethers.utils.getAddress(address) : null;
 }
 
@@ -55,12 +56,13 @@ async function userReferralLink() {
   let referralLink;
   console.log("userReferralLink() is working");
   ethProvider = getProvider();
+  console.log("userReferralLink provider:", ethProvider);
   userAddress = ethProvider.provider.selectedAddress;
   const referralElement = document.getElementById("userReferralLink");
   const copyLinkElement = document.getElementsByClassName("copy-link");
-  if (userAddress != null){
+  if (userAddress){
     const icapAddress = convertToIcap(userAddress);
-    referralLink = `https://nft.fuzion.team/?ref=${icapAddress}`;
+    referralLink = `https://fuzion.team/?ref=${icapAddress}`;
   }
   else{
     referralLink = "Connect wallet for referral link";

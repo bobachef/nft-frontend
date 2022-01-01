@@ -4,6 +4,8 @@ const { getBnbBalance } = require("./bnbBalance");
 const { checkWhiteListing } = require("./contracts/punk");
 const {userReferralLink, userReferralCommissions, userTotalReferral}= require("../referralLink");
 const {getPunkConstants, getUserPunkData, punkSaleStatus} = require("../blockchain/contracts/punk");
+const { providerHelper } = require("./helper");
+const {getProvider, getSigner, getWeb3Provider} = providerHelper;
 const ethers = require("ethers");
 
 const Web3Modal = window.Web3Modal.default;
@@ -34,9 +36,10 @@ async function init() {
   await getPunkConstants();
   await punkSaleStatus();
   // functions from referralLink.js file
-  await userReferralLink();
-  await userReferralCommissions();
-  await userTotalReferral();
+  // await userReferralLink();
+  // await userReferralCommissions();
+  // await userTotalReferral();
+  // function from helper for get current year
 }
 
 function initWeb3Modal() {
@@ -62,16 +65,16 @@ function initWeb3Modal() {
 // trriger when connectWallet btn is clicked
 async function connectAccount() {
   try {
-    // connection = await web3Modal.connect();
-    // provider = new ethers.providers.Web3Provider(connection);
-    // signer = provider.getSigner();
-    provider = await web3Modal.connect();
-    const web3 = new Web3(Web3.givenProvider);
+    connection = await web3Modal.connect();
+    provider = getWeb3Provider(connection);
+    signer = provider.getSigner();
+    console.log("connectAccount signer:", signer);
+    console.log("connectAccount provider:", provider);
+
     localStorage.setItem("connectStatus", "connected");
-    const result = await web3.eth.getAccounts();
-    user.address = result[0];
+    // user.address = await signer.getAddress();
     initContract();
-    if (user.address !== undefined){
+    if (user.address){
       // function for get bnb Balance
       await getBnbBalance(user.address);
       // function from punk contract
@@ -96,20 +99,23 @@ async function userLoginAttempt() {
     status = localStorage.getItem("connectStatus");
     try {
       if (status !== "connected") {
-        // connection = await web3Modal.connect();
-        // provider = new ethers.providers.Web3Provider(connection);
-        // signer = provider.getSigner();
-        provider = await web3Modal;
+        connection = await web3Modal.connect();
+        console.log("userLoginAttempt connection:", connection)
+        provider = getWeb3Provider(connection);
+        console.log("userLoginAttempt provider:", provider)
+        signer = provider.getSigner();
+        console.log("userLoginAttempt signer:", signer)
+
         localStorage.setItem("connectStatus", "connected");
       } else {
         await getShortAddressCheckNetworkErrorCopyLink();
       }
-      const web3 = new Web3(Web3.givenProvider);
-      const result = await web3.eth.getAccounts();
-      user.address = result[0];
+
+
+      // user.address = await signer.getAddress();
       await initContract();
       // function for get bnb Balance
-      if (user.address !== undefined){
+      if (user.address){
         await getBnbBalance(user.address);
         // function from punk contract
         await getUserPunkData(user.address);

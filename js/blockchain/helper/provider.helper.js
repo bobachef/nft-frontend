@@ -11,11 +11,11 @@ function getReadOnlyProvider(rpcUrl = RPC_URL[56]) {
   rpcProvider = new ethers.providers.JsonRpcProvider(RPC_URL[56]);
   return rpcProvider;
 }
-function getWeb3Provider() {
-  if (!window.ethereum) {
+function getWeb3Provider(connection) {
+  if (!connection){
     return null;
   }
-  web3Provider = new ethers.providers.Web3Provider(window.ethereum);
+  web3Provider = new ethers.providers.Web3Provider(connection);
   return web3Provider;
 }
 function getSigner() {
@@ -26,10 +26,12 @@ function getSigner() {
   signer = etherProvider.getSigner();
   return signer;
 }
-function getProvider() {
-  return getWeb3Provider() || getReadOnlyProvider();
+function getProvider(connection) {
+  return web3Provider || getReadOnlyProvider();
 }
 module.exports = {
   getProvider,
   getSigner,
+  getReadOnlyProvider,
+  getWeb3Provider,
 };

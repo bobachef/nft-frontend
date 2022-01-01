@@ -1357,4 +1357,8 @@ svg .cls-1 {
   .mint-modal-inner {
     width: 100%;
   }
+  .hero-section .minting-block{
+    margin-top: 0px;
+    margin-left: 19px;
+  }
 }
