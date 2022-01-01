@@ -1,10 +1,11 @@
 const {ZERO_ADDRESS, REFERRAL_QUERY_PARAM, REFERRAL_COOKIE_NAME,} = require("./blockchain/constants");
 const { providerHelper } = require("./blockchain/helper/index");
 const {getProvider, getSigner} = require("./blockchain/helper/provider.helper");
-let ethProvider;
+let provider;
+let signer;
 let userAddress;
 
-// getRef();
+getRef();
 
 $('[data-toggle="tooltip"]').click(function () {
   $(this).tooltip("hide").attr("data-original-title", "Copied").tooltip("show");
@@ -55,9 +56,9 @@ function convertToIcap(address) {
 async function userReferralLink() {
   let referralLink;
   console.log("userReferralLink() is working");
-  ethProvider = getProvider();
-  console.log("userReferralLink provider:", ethProvider);
-  userAddress = ethProvider.provider.selectedAddress;
+  signer = await getSigner();
+  userAddress = await signer.getAddress();
+  console.log("userReferralLink address:", userAddress);
   const referralElement = document.getElementById("userReferralLink");
   const copyLinkElement = document.getElementsByClassName("copy-link");
   if (userAddress){

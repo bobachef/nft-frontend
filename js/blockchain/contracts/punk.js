@@ -35,9 +35,11 @@ const abi = [
 ];
 
 async function getPunkContract(chainId = 80001) {
-  const signer = providerHelper.getSigner();
+  const provider = await providerHelper.getProvider();
+  console.log("getPunkContract provider:", provider)
   const punkAddress = PUNK_ADDRESS[chainId];
-  punk = new ethers.Contract(punkAddress, abi, signer);
+  punk = new ethers.Contract(punkAddress, abi, provider);
+  console.log("punk contract:", punk);
   return punk;
 }
 
@@ -99,6 +101,8 @@ async function punkSaleStatus(){
 // call on wallet connect
 async function getUserPunkData(userAddress){
   // isWhitelisted
+  // const signer = await providerHelper.getSigner();
+  console.log("userAddress:", userAddress);
   isWhiteListed = await punk.whitelist(userAddress);
   const presaleStatusElement = document.getElementsByClassName("presale-status");
   if (isWhiteListed && presaleStatusElement[0]){

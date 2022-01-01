@@ -1,7 +1,6 @@
 const { nftContract } = require("./constants");
 const abi = require("./abi/nft");
 const { getBnbBalance } = require("./bnbBalance");
-const { checkWhiteListing } = require("./contracts/punk");
 const {userReferralLink, userReferralCommissions, userTotalReferral}= require("../referralLink");
 const {getPunkConstants, getUserPunkData, punkSaleStatus} = require("../blockchain/contracts/punk");
 const { providerHelper } = require("./helper");
@@ -30,15 +29,15 @@ async function init() {
   const connectionStatus = localStorage.getItem("connectStatus");
   if (connectionStatus == "connected") {
     // await connectWallet.userLoginAttempt();
-    userLoginAttempt();
+   await userLoginAttempt();
   }
   // functions from punk.js file
   await getPunkConstants();
   await punkSaleStatus();
   // functions from referralLink.js file
-  // await userReferralLink();
-  // await userReferralCommissions();
-  // await userTotalReferral();
+  await userReferralLink();
+  await userReferralCommissions();
+  await userTotalReferral();
   // function from helper for get current year
 }
 
@@ -66,17 +65,20 @@ function initWeb3Modal() {
 async function connectAccount() {
   try {
     connection = await web3Modal.connect();
-    provider = getWeb3Provider(connection);
-    signer = provider.getSigner();
+    provider = await getWeb3Provider(connection);
+    signer = await provider.getSigner();
     console.log("connectAccount signer:", signer);
     console.log("connectAccount provider:", provider);
 
     localStorage.setItem("connectStatus", "connected");
-    // user.address = await signer.getAddress();
-    initContract();
+    user.address = await signer.getAddress();
+    console.log("connectAccount: ", user.address);
+    // initContract();
     if (user.address){
+      console.log("a");
       // function for get bnb Balance
       await getBnbBalance(user.address);
+      console.log("b");
       // function from punk contract
       await getUserPunkData(user.address);
     }
@@ -97,65 +99,79 @@ async function userLoginAttempt() {
   isConnected = false;
   await window.addEventListener("load", async function () {
     status = localStorage.getItem("connectStatus");
+    console.log("status info:", status);
     try {
+      console.log(12);
       if (status !== "connected") {
+        console.log(11);
         connection = await web3Modal.connect();
         console.log("userLoginAttempt connection:", connection)
-        provider = getWeb3Provider(connection);
+        provider = await getWeb3Provider(connection);
         console.log("userLoginAttempt provider:", provider)
-        signer = provider.getSigner();
+        signer = await provider.getSigner();
         console.log("userLoginAttempt signer:", signer)
-
         localStorage.setItem("connectStatus", "connected");
       } else {
+        console.log(10);
         await getShortAddressCheckNetworkErrorCopyLink();
       }
-
-
-      // user.address = await signer.getAddress();
-      await initContract();
+      console.log(13);
+      signer = await providerHelper.getSigner();
+      console.log("signer 2:", signer);
+      user.address = await signer.getAddress(); //found
+      console.log("userLoginAttempt userAddress: ", user.address);
+      // await initContract();
       // function for get bnb Balance
       if (user.address){
+        console.log(9);
         await getBnbBalance(user.address);
+        console.log(7);
         // function from punk contract
         await getUserPunkData(user.address);
+        console.log(8);
       }
       // functions from punk.js file
       await getPunkConstants();
+      console.log(1);
       await punkSaleStatus();
+      console.log(2);
       // functions from referralLink.js file
       await userReferralLink();
+      console.log(3);
       await userReferralCommissions();
+      console.log(4);
       await userTotalReferral();
-      // await punkSaleStatus();
+      console.log(5);
+      await punkSaleStatus();
+      console.log(6);
     } catch (error) {
-      console.error(error);
+      console.error("userLoginAttempt:", error);
     }
   });
 }
 // initialize contract
-async function initContract() {
-  try {
-    await (mainContract = new web3.eth.Contract(abi, nftContract));
-    if (mainContract != undefined) {
-      await getShortAddressCheckNetworkErrorCopyLink();
-    } else {
-      setTimeout(() => {
-        initContract();
-      }, 2000);
-    }
-  } catch (e) {
-    setTimeout(() => {
-      initContract();
-    }, 2000);
-  }
-  setInterval(function () {
-    getShortAddressCheckNetworkErrorCopyLink(); // todo figure out async setTimeout implementation
-  }, 5000);
-}
+// async function initContract() {
+//   try {
+//     await (mainContract = new web3.eth.Contract(abi, nftContract));
+//     if (mainContract != undefined) {
+//       await getShortAddressCheckNetworkErrorCopyLink();
+//     } else {
+//       setTimeout(() => {
+//         initContract();
+//       }, 2000);
+//     }
+//   } catch (e) {
+//     setTimeout(() => {
+//       initContract();
+//     }, 2000);
+//   }
+//   setInterval(function () {
+//     getShortAddressCheckNetworkErrorCopyLink(); // todo figure out async setTimeout implementation
+//   }, 5000);
+// }
 
 async function getShortAddressCheckNetworkErrorCopyLink() {
-  if (user.address !== undefined){
+  if (user.address){
     let p2 = user.address.slice(42 - 5);
     const shortAddressElement =
         document.getElementsByClassName("shortAddress")[0];
@@ -170,7 +186,6 @@ async function getShortAddressCheckNetworkErrorCopyLink() {
     if (fullAddress) {
       fullAddress.value = user.address;
     }
-
     document.querySelector("#prepare").style.display = "none";
     document.querySelector("#connected").style.display = "block";
   }
@@ -210,7 +225,6 @@ module.exports = {
   init,
   connectAccount,
   userLoginAttempt,
-  initContract,
   getShortAddressCheckNetworkErrorCopyLink,
   disconnect,
   initWeb3Modal,

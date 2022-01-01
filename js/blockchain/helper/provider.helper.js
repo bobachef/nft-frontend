@@ -11,22 +11,26 @@ function getReadOnlyProvider(rpcUrl = RPC_URL[56]) {
   rpcProvider = new ethers.providers.JsonRpcProvider(RPC_URL[56]);
   return rpcProvider;
 }
-function getWeb3Provider(connection) {
+async function getWeb3Provider(connection) {
   if (!connection){
-    return null;
+    return web3Provider || null;
   }
   web3Provider = new ethers.providers.Web3Provider(connection);
+  signer = await web3Provider.getSigner();
   return web3Provider;
 }
-function getSigner() {
+async function getSigner() {
   if (signer) {
     return signer;
   }
-  etherProvider = getProvider();
-  signer = etherProvider.getSigner();
+  if (!web3Provider){
+    return null;
+  }
+  // etherProvider = getProvider();
+  signer = await web3Provider.getSigner();
   return signer;
 }
-function getProvider(connection) {
+function getProvider() {
   return web3Provider || getReadOnlyProvider();
 }
 module.exports = {
